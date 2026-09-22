@@ -1,0 +1,256 @@
+{
+    "DoublyLinkedList": [
+      {
+        "testCase1": [
+          {
+            "isEmpty": {}
+          },
+          {
+            "insertAtHead": 50
+          },
+          {
+            "insertAtHead": 40
+          },
+          {
+            "insertAtHead": 30
+          },
+          {
+            "insertAtTail": 60
+          },
+          {
+            "insertAtTail": 70
+          },
+          {
+            "insertAtTail": 80
+          },
+          {
+            "insertAtTail": 90
+          },
+          {
+            "insertAtHead": 20
+          },
+          {
+            "insertAtHead": 10
+          },
+          {
+            "insertAtTail": 100
+          },
+          {
+            "isEmpty": {}
+          },
+          {
+            "printList": {}
+          },
+          {
+            "reversePrintList": {}
+          }
+        ],
+        "testCase2": [
+          {
+            "isEmpty": {}
+          },
+          {
+            "insertAtHead": 30
+          },
+          {
+            "remove": 30
+          },
+          {
+            "insertAtTail": 40
+          },
+          {
+            "insertAtHead": 50
+          },
+          {
+            "insertAtTail": 70
+          },
+          {
+            "insertAtHead": 80
+          },
+          {
+            "insertAtHead": 1000
+          },
+          {
+            "remove": 70
+          },
+          {
+            "isEmpty": {}
+          },
+          {
+            "printList": {}
+          },
+          {
+            "reversePrintList": {}
+          }
+        ],
+        "testCase3": [
+          {
+            "isEmpty": {}
+          },
+          {
+            "insertAtHead": 80
+          },
+          {
+            "remove": 30
+          },
+          {
+            "insertAtTail": 40
+          },
+          {
+            "insertAtHead": 50
+          },
+          {
+            "removeHeaderNode": {}
+          },
+          {
+            "insertAtTail": 70
+          },
+          {
+            "insertAtHead": 180
+          },
+          {
+            "insertAtHead": 1000
+          },
+          {
+            "removeTailNode": {}
+          },
+          {
+            "remove": 50
+          },
+          {
+            "isEmpty": {}
+          },
+          {
+            "printList": {}
+          },
+          {
+            "reversePrintList": {}
+          }
+        ],
+        "testCase4": [
+          {
+            "isEmpty": {}
+          },
+          {
+            "insertAtHead": 10
+          },
+          {
+            "moveNodeToTail": 10
+          },
+          {
+            "insertAtTail": 40
+          },
+          {
+            "insertAtHead": 50
+          },
+          {
+            "moveNodeToTail": 50
+          },
+          {
+            "insertAtTail": 70
+          },
+          {
+            "moveNodeToHead": 70
+          },
+          {
+            "insertAtHead": 180
+          },
+          {
+            "insertAtHead": 1000
+          },
+          {
+            "removeTailNode": {}
+          },
+          {
+            "remove": 180
+          },
+          {
+            "insertAtHead": 100
+          },
+          {
+            "insertAtHead": 10000
+          },
+          {
+            "removeHeaderNode": {}
+          },
+          {
+            "isEmpty": {}
+          },
+          {
+            "printList": {}
+          },
+          {
+            "reversePrintList": {}
+          }
+        ],
+        "testCase5": [
+          {
+            "isEmpty": {}
+          },
+          {
+            "insertAtHead": 34
+          },
+          {
+            "insertAtHead": 10000
+          },
+          {
+            "removeHeaderNode": {}
+          },
+          {
+            "insertAtTail": 987
+          },
+          {
+            "insertAtTail": 23
+          },
+          {
+            "insertAtTail": 9
+          },
+          {
+            "moveNodeToHead": 9
+          },
+          {
+            "moveNodeToTail": 987
+          },
+          {
+            "remove": 987
+          },
+          {
+            "removeTailNode": {}
+          },
+          {
+            "insertAtHead": 42
+          },
+          {
+            "insertAtHead": 23
+          },
+          {
+            "insertAtHead": 67
+          },
+          {
+            "insertAtHead": 80
+          },
+          {
+            "insertAtHead": 53
+          },
+          {
+            "insertAtHead": 86
+          },
+          {
+            "moveNodeToHead": 34
+          },
+          {
+            "moveNodeToHead": 9
+          },
+          {
+            "isEmpty": {}
+          },
+          {
+            "printList": {}
+          },
+          {
+            "reversePrintList": {}
+          }
+        ]
+      }
+    ]
+}
