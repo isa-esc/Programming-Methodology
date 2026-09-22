@@ -61,7 +61,7 @@ bool HashTable::remove(int curKey){
     return false; //did not exist
   }
 
-  HashNode* currentNode = table[index]; //point to first node in bucket
+  HashNode* currentNode = table[index]; //point to current bucket
   while(currentNode != nullptr){ //runs through the whole bucket
     if(currentNode->key == curKey){ //will be true when we find curKey
       if(currentNode->prev == nullptr){
