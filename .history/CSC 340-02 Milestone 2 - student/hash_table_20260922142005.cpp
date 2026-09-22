@@ -132,6 +132,3 @@ bool HashTable::contains(int curKey){
 }
 
 //printTable
-void HashTable::printTable(){
-  
-}

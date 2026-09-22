@@ -61,11 +61,12 @@ bool HashTable::remove(int curKey){
     return false; //did not exist
   }
 
-  HashNode* currentNode = table[index]; //point to current bucket
-  while(currentNode != nullptr){ //runs through the whole bucket
-    if(currentNode->key == curKey){ //will be true when we find curKey
-      if(currentNode->prev == nullptr){
-        table[index] = currentNode->next; //next node becomes the firts node
+  HashNode* current = table[index]; //point to current bucket
+  while(current != nullptr){ //runs through the whole bucket
+    if(current->key == curKey){ //will be true when we find curKey
+      table[index] = current->next;
+      if(current->prev == nullptr){
+        table[index] = current->next; //next node becomes the firts node
 
         if(table[index] != nullptr){
           table[index]->prev = nullptr;
@@ -73,65 +74,30 @@ bool HashTable::remove(int curKey){
       }
       else{
         //previous node becomes connected to next node, skipping current
-        currentNode->prev->next = currentNode->next;
+        current->prev->next = current->next;
 
         //in case there is another node
-        if(currentNode->next != nullptr){
-          currentNode->next->prev = currentNode->prev;
+        if(current->next != nullptr){
+          current->next->prev = current->prev;
         }
       }
-      delete currentNode; //current node gets deleted
+      delete current; //current node gets deleted
       numberOfItems--;
       return true; //node got succesfully deleted, exits
     }
-    currentNode = currentNode->next; //continues searching
+    current = current->next; //continues searching
   }
   return false; //node not found, return false
 
 }
 
 //clear
-void HashTable::clear(){
-  //delete node by node
-  for(int i = 0; i <numberOfBuckets; i++){
-    HashNode* currentNode = table[i];
-    while(currentNode != nullptr){
-      HashNode* nextNode = currentNode->next;
-      delete currentNode;
-      currentNode = nextNode; //move to next node
-    }
-    table[i] = nullptr; //eventually empties the bucket
-  }
-  numberOfItems = 0;
-}
+
 
 //getItem
-HashNode* HashTable::getItem(int curKey){
-  //calculate bucket to search in
-  int index = calculateHashCode(curKey);
-  HashNode* currentNode = table[index];
-  
-  //search for node
-  while(currentNode != nullptr){
-    if(currentNode->key == curKey){
-      return currentNode; //found, return
-    }
-    currentNode = currentNode->next; //move on to next node
-  }
 
-  return nullptr; //nothing was found
-}
 
 //contains
-bool HashTable::contains(int curKey){
-  //use getItem's search feature to check if item exists
-  if(getItem(curKey) != nullptr){
-    return true; //getItem did not return a nullptr
-  }
-  else return false;  //not found
-}
+
 
 //printTable
-void HashTable::printTable(){
-  
-}

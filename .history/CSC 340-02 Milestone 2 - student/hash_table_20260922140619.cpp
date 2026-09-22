@@ -106,32 +106,9 @@ void HashTable::clear(){
 }
 
 //getItem
-HashNode* HashTable::getItem(int curKey){
-  //calculate bucket to search in
-  int index = calculateHashCode(curKey);
-  HashNode* currentNode = table[index];
-  
-  //search for node
-  while(currentNode != nullptr){
-    if(currentNode->key == curKey){
-      return currentNode; //found, return
-    }
-    currentNode = currentNode->next; //move on to next node
-  }
 
-  return nullptr; //nothing was found
-}
 
 //contains
-bool HashTable::contains(int curKey){
-  //use getItem's search feature to check if item exists
-  if(getItem(curKey) != nullptr){
-    return true; //getItem did not return a nullptr
-  }
-  else return false;  //not found
-}
+
 
 //printTable
-void HashTable::printTable(){
-  
-}

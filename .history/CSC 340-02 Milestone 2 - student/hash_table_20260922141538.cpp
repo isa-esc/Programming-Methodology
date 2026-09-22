@@ -123,15 +123,6 @@ HashNode* HashTable::getItem(int curKey){
 }
 
 //contains
-bool HashTable::contains(int curKey){
-  //use getItem's search feature to check if item exists
-  if(getItem(curKey) != nullptr){
-    return true; //getItem did not return a nullptr
-  }
-  else return false;  //not found
-}
+
 
 //printTable
-void HashTable::printTable(){
-  
-}
