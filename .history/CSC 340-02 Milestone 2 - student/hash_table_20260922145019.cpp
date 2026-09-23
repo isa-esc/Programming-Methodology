@@ -1,62 +1,41 @@
 /**
  * @file hash_table.cpp
- * @brief This file uses the deared files provided to implement a fully functional hash table
- * @date 09/22/2026
+ * @brief ADD A DESCRIPTION
+ * @date 09/21/2026
  * @author Isabela Escobedo Luna
- */
+*/
 
 #include "hash_node.h"
 #include "hash_table.h"
 #include "milestone2.h"
 #include <string>
 
-/**
- * @brief Gets the internal array of bucket pointers.
- * @return A pointer to the array of HashNode pointers.
- */
+//getTable
 HashNode** HashTable::getTable(){
   return table;
 }
 
-/**
- * @brief Gets the number of buckets in the hash table.
- * @return The number of buckets (table size).
- */
+//getSize
 int HashTable::getSize(){
   return numberOfBuckets;
 }
 
-/**
- * @brief Calculates the hash code for a given key.
- * @param currentKey The key for which the hash code is to be calculated.
- * @return The computed hash code (bucket index).
- */
+//calculateHashCode
 int HashTable::calculateHashCode(int currentKey){
   return currentKey % numberOfBuckets; //will return hash code
 }
 
-/**
- * @brief Checks whether the hash table is empty.
- * @return True if the table has no entries, false otherwise.
- */
+//isEmpty
 bool HashTable::isEmpty(){ 
   return numberOfItems == 0; //evaluates and returns boolean in one line
 }
 
-/**
- * @brief Gets the number of items currently stored in teh table.
- * @return The number of items in the table.
- */
+//getNumberOfItems
 int HashTable::getNumberOfItems(){
   return numberOfItems;
 }
 
-/**
- * @brief Adds a new node to the table.
- * @param curKey The key associated with the node.
- * @param myNode Pointer to the node to be added.
- * @return True if insertion is successful
- */
+//add
 bool HashTable::add(int curKey, HashNode* myNode){
   int index = calculateHashCode(curKey); //get index of curKey
   if(table[index] == nullptr){
@@ -75,11 +54,7 @@ bool HashTable::add(int curKey, HashNode* myNode){
   return true; //successfully added
 }
 
-/**
- * @brief Removes a node with the specified key from the table.
- * @param curKey The key of the node to remove.
- * @return True if the node was successfully removed; false if not found.
- */
+//remove
 bool HashTable::remove(int curKey){
   int index = calculateHashCode(curKey);
   if(table[index] == nullptr){
@@ -93,7 +68,7 @@ bool HashTable::remove(int curKey){
         table[index] = currentNode->next; //next node becomes the firts node
 
         if(table[index] != nullptr){
-          table[index]->prev = nullptr;
+          table[index]->prev = nullptr;s
         }
       }
       else{
@@ -115,9 +90,7 @@ bool HashTable::remove(int curKey){
 
 }
 
-/**
- * @brief Clears the entire hash table by deleting all entries.
- */
+//clear
 void HashTable::clear(){
   //delete node by node
   for(int i = 0; i <numberOfBuckets; i++){
@@ -132,11 +105,7 @@ void HashTable::clear(){
   numberOfItems = 0;
 }
 
-/**
- * @brief Retrieves the node associaeted with a given key.
- * @param curKey The key to look up.
- * @return Pointer to the corresponding HashNode, or nullptr if not found.
- */
+//getItem
 HashNode* HashTable::getItem(int curKey){
   //calculate bucket to search in
   int index = calculateHashCode(curKey);
@@ -153,11 +122,7 @@ HashNode* HashTable::getItem(int curKey){
   return nullptr; //nothing was found
 }
 
-/**
- * @brief Checks if a node with the given key exists in the table.
- * @param curKey The key to search for.
- * @return True if the key is found; false otherwise.
- */
+//contains
 bool HashTable::contains(int curKey){
   //use getItem's search feature to check if item exists
   if(getItem(curKey) != nullptr){
@@ -166,12 +131,7 @@ bool HashTable::contains(int curKey){
   else return false;  //not found
 }
 
-/**
- * @brief Prints the contents of the hash table.
- * 
- * Outputs each bucket and the nodes it contains to both the console
- * and the output log (via logToFileAndConsole).
- */
+//printTable
 void HashTable::printTable(){
   //goes through all buckets
   for(int i = 0; i < numberOfBuckets; i++){

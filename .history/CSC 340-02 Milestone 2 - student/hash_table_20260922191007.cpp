@@ -1,7 +1,7 @@
 /**
  * @file hash_table.cpp
  * @brief This file uses the deared files provided to implement a fully functional hash table
- * @date 09/22/2026
+ * @date 09/21/2026
  * @author Isabela Escobedo Luna
  */
 

@@ -1,0 +1,161 @@
+Processing testCase1:
+
+isEmpty: 1
+add key: 20
+add key: 30
+clear hash table
+isEmpty: 1
+add key: 40
+add key: 50
+remove key: 106
+isEmpty: 0
+FIFO info from cacheManager.  Node key: 50; name: John Doe5;address: 1234 State St; city: Oakland; state: CA; zip: 12345
+FIFO info from cacheManager.  Node key: 40; name: John Doe4;address: 1234 Home St; city: Oakland; state: CA; zip: 12345
+Processing testCase2:
+
+add key: 101
+add key: 102
+add key: 202
+getNumberOfItems: 3
+add key: 303
+add key: 402
+add key: 502
+add key: 602
+add key: 702
+getNumberOfItems: 8
+remove key: 202
+getNumberOfItems: 7
+contains(702): 1
+contains(202): 0
+contains(901): 0
+add key: 808
+remove key: 702
+add key: 902
+FIFO info from cacheManager.  Node key: 902; name: Mary Smith;address: 12345 Main St; city: Oakland; state: CA; zip: 12345
+FIFO info from cacheManager.  Node key: 101; name: John Smith;address: 123 Main St; city: Oakland; state: CA; zip: 12345
+FIFO info from cacheManager.  Node key: 102; name: John Doe1;address: 1234 Main St; city: Oakland; state: CA; zip: 12345
+FIFO info from cacheManager.  Node key: 808; name: John Doe8;address: 1234 Cabin St; city: Oakland; state: CA; zip: 12345
+FIFO info from cacheManager.  Node key: 402; name: John Doe4;address: 1234 Brown St; city: Oakland; state: CA; zip: 12345
+FIFO info from cacheManager.  Node key: 303; name: John Doe3;address: 1234 Elm St; city: Oakland; state: CA; zip: 12345
+FIFO info from cacheManager.  Node key: 502; name: John Doe5;address: 1234 Jack St; city: Oakland; state: CA; zip: 12345
+FIFO info from cacheManager.  Node key: 602; name: John Doe6;address: 1234 Flower St; city: Oakland; state: CA; zip: 12345
+Processing testCase3:
+
+add key: 106
+add key: 510
+add key: 108
+add key: 611
+contains(106): 1
+getNumberOfItems: 4
+remove key: 106
+contains(510): 1
+contains(106): 0
+getNumberOfItems: 3
+add key: 110
+add key: 111
+add key: 712
+add key: 113
+getNumberOfItems: 7
+remove key: 712
+getNumberOfItems: 6
+add key: 114
+add key: 115
+getItem(712):  does not exist
+getItem key: 113 has the following -> FIFO info from cacheManager.  Node key: 113; name: Tony Doe8;address: 1234 Auto St; city: Oakland; state: CA; zip: 12345
+getNumberOfItems: 8
+FIFO info from cacheManager.  Node key: 110; name: Bill Doe5;address: 1234 Brown St; city: Oakland; state: CA; zip: 12345
+FIFO info from cacheManager.  Node key: 111; name: Tony Do6e;address: 1234 Jack St; city: Oakland; state: CA; zip: 12345
+FIFO info from cacheManager.  Node key: 113; name: Tony Doe8;address: 1234 Auto St; city: Oakland; state: CA; zip: 12345
+FIFO info from cacheManager.  Node key: 114; name: Tony Doe9;address: 1234 Cabin St; city: Oakland; state: CA; zip: 12345
+FIFO info from cacheManager.  Node key: 510; name: Bill Do2e;address: 1234 Main St; city: Oakland; state: CA; zip: 12345
+FIFO info from cacheManager.  Node key: 115; name: Tony Smith10;address: 12345 Main St; city: Oakland; state: CA; zip: 12345
+FIFO info from cacheManager.  Node key: 611; name: Bill Doe4;address: 1234 Elm St; city: Oakland; state: CA; zip: 12345
+FIFO info from cacheManager.  Node key: 108; name: Bill Doe3;address: 1234 Oak St; city: Oakland; state: CA; zip: 12345
+Processing testCase4:
+
+add key: 101
+add key: 102
+add key: 103
+add key: 104
+add key: 105
+add key: 307
+remove key: 307
+getNumberOfItems: 5
+add key: 408
+add key: 509
+remove key: 509
+getNumberOfItems: 6
+add key: 201
+add key: 302
+add key: 403
+remove key: 201
+remove key: 101
+add key: 504
+add key: 605
+add key: 206
+remove key: 605
+getNumberOfItems: 9
+contains(509): 0
+contains(206): 1
+add key: 706
+contains(706): 1
+getNumberOfItems: 10
+FIFO info from cacheManager.  Node key: 408; name: John Doe6;address: 1234 Oak St; city: Oakland; state: CA; zip: 12345
+FIFO info from cacheManager.  Node key: 706; name: John Doe8;address: 1234 Cabin St; city: Oakland; state: CA; zip: 12345
+FIFO info from cacheManager.  Node key: 102; name: John Doe1;address: 1234 Main St; city: Oakland; state: CA; zip: 12345
+FIFO info from cacheManager.  Node key: 103; name: John Doe2;address: 1234 Oak St; city: Oakland; state: CA; zip: 12345
+FIFO info from cacheManager.  Node key: 302; name: John Smith2;address: 1234 Brown St; city: Oakland; state: CA; zip: 12345
+FIFO info from cacheManager.  Node key: 104; name: John Doe3;address: 1234 Oak St; city: Oakland; state: CA; zip: 12345
+FIFO info from cacheManager.  Node key: 105; name: John Doe4;address: 1234 Oak St; city: Oakland; state: CA; zip: 12345
+FIFO info from cacheManager.  Node key: 403; name: John Smith3;address: 1234 Jack St; city: Oakland; state: CA; zip: 12345
+FIFO info from cacheManager.  Node key: 206; name: John Smith6;address: 1234 Oak St; city: Oakland; state: CA; zip: 12345
+FIFO info from cacheManager.  Node key: 504; name: John Smith4;address: 1234 Flower St; city: Oakland; state: CA; zip: 12345
+Processing testCase5:
+
+add key: 42
+add key: 23
+add key: 67
+getNumberOfItems: 3
+FIFO info from cacheManager.  Node key: 67; name: John Doe2;address: 1234 Oak St; city: Oakland; state: CA; zip: 12345
+FIFO info from cacheManager.  Node key: 23; name: John Doe1;address: 1234 Main St; city: Oakland; state: CA; zip: 12345
+FIFO info from cacheManager.  Node key: 42; name: John Smith;address: 123 Main St; city: Oakland; state: CA; zip: 12345
+printed table based upon json data 
+
+add key: 80
+add key: 53
+add key: 54
+remove key: 54
+getNumberOfItems: 5
+FIFO info from cacheManager.  Node key: 67; name: John Doe2;address: 1234 Oak St; city: Oakland; state: CA; zip: 12345
+FIFO info from cacheManager.  Node key: 23; name: John Doe1;address: 1234 Main St; city: Oakland; state: CA; zip: 12345
+FIFO info from cacheManager.  Node key: 80; name: John Doe3;address: 1234 Elm St; city: Oakland; state: CA; zip: 12345
+FIFO info from cacheManager.  Node key: 53; name: John Doe4;address: 1234 Brown St; city: Oakland; state: CA; zip: 12345
+FIFO info from cacheManager.  Node key: 42; name: John Smith;address: 123 Main St; city: Oakland; state: CA; zip: 12345
+printed table based upon json data 
+
+add key: 86
+add key: 34
+add key: 9
+add key: 201
+remove key: 201
+getNumberOfItems: 8
+getItem key: 86 has the following -> FIFO info from cacheManager.  Node key: 86; name: John Doe6;address: 1234 Flower St; city: Oakland; state: CA; zip: 12345
+getItem(999):  does not exist
+FIFO info from cacheManager.  Node key: 34; name: John Doe7;address: 1234 Flower St; city: Oakland; state: CA; zip: 12345
+FIFO info from cacheManager.  Node key: 67; name: John Doe2;address: 1234 Oak St; city: Oakland; state: CA; zip: 12345
+FIFO info from cacheManager.  Node key: 23; name: John Doe1;address: 1234 Main St; city: Oakland; state: CA; zip: 12345
+FIFO info from cacheManager.  Node key: 80; name: John Doe3;address: 1234 Elm St; city: Oakland; state: CA; zip: 12345
+FIFO info from cacheManager.  Node key: 9; name: John Doe8;address: 1234 Flower St; city: Oakland; state: CA; zip: 12345
+FIFO info from cacheManager.  Node key: 86; name: John Doe6;address: 1234 Flower St; city: Oakland; state: CA; zip: 12345
+FIFO info from cacheManager.  Node key: 53; name: John Doe4;address: 1234 Brown St; city: Oakland; state: CA; zip: 12345
+FIFO info from cacheManager.  Node key: 42; name: John Smith;address: 123 Main St; city: Oakland; state: CA; zip: 12345
+printed table based upon json data 
+
+FIFO info from cacheManager.  Node key: 34; name: John Doe7;address: 1234 Flower St; city: Oakland; state: CA; zip: 12345
+FIFO info from cacheManager.  Node key: 67; name: John Doe2;address: 1234 Oak St; city: Oakland; state: CA; zip: 12345
+FIFO info from cacheManager.  Node key: 23; name: John Doe1;address: 1234 Main St; city: Oakland; state: CA; zip: 12345
+FIFO info from cacheManager.  Node key: 80; name: John Doe3;address: 1234 Elm St; city: Oakland; state: CA; zip: 12345
+FIFO info from cacheManager.  Node key: 9; name: John Doe8;address: 1234 Flower St; city: Oakland; state: CA; zip: 12345
+FIFO info from cacheManager.  Node key: 86; name: John Doe6;address: 1234 Flower St; city: Oakland; state: CA; zip: 12345
+FIFO info from cacheManager.  Node key: 53; name: John Doe4;address: 1234 Brown St; city: Oakland; state: CA; zip: 12345
+FIFO info from cacheManager.  Node key: 42; name: John Smith;address: 123 Main St; city: Oakland; state: CA; zip: 12345
