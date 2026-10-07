@@ -1,7 +1,9 @@
 /**
  * @file hash_table.cpp
  * @brief This file uses the deared files provided to implement a fully functional hash table
- * @date 09/22/2026
+ * @date 09/22/2026 - Created and implemented all hash table methods
+   @date 10/07/2026 - Updated printTable to print a header with an entry count
+                      and and end of table message
  * @author Isabela Escobedo Luna
  */
 
@@ -173,13 +175,25 @@ bool HashTable::contains(int curKey){
  * and the output log (via logToFileAndConsole).
  */
 void HashTable::printTable(){
+logToFileAndConsole(""); //blank line
+logToFileAndConsole("Here are the Hash Table contents (" +
+                    std::to_string(numberOfItems) + " entries):");
+
   //goes through all buckets
   for(int i = 0; i < numberOfBuckets; i++){
     HashNode* currentNode = table[i];
 
-    while(currentNode != nullptr){
+    if(currentNode == nullptr){
+      logToFileAndConsole("Bucket " + std::to_string(i) + ": Empty");
+    }
+    else{
+      logToFileAndConsole("Bucket " + std::to_string(i) + ": ");
+
+      while(currentNode != nullptr){
       currentNode->printNode(true);
       currentNode = currentNode->next;
+      }
     }
   }
+  logToFileAndConsole("End of table");
 }
