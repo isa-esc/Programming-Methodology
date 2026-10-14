@@ -20,7 +20,7 @@
 * @return Pointer to the internal HashTable.
 */
 HashTable* CacheManager::getTable() {
-  return hashTable; //private member, so this is how main can reach it
+  return hashTable;
 }
 
 /**
@@ -36,7 +36,7 @@ DoublyLinkedList* CacheManager::getList() {
 * @return Number of items currently cached.
 */
 int CacheManager::getSize() {
-  return hashTable->getNumberOfItems(); //hash table already keeps count
+  return hashTable->getNumberOfItems(); //hash table already kept count
 }
 
 /**
@@ -51,34 +51,33 @@ bool CacheManager::isEmpty() {
 * @brief Adds a new node to the CacheManager; if number of items >=
 *        FIFOListSize, then remove the oldest entry.
 * @param curKey Key associated with the node.
-* @param myNode Pointer to the DllNode to store (the cache takes ownership).
+* @param myNode Pointer to the DllNode to store.
 * @return True if the node was added.
 */
 bool CacheManager::add(int curKey, DllNode* myNode) {
   if (myNode == nullptr) {
-    return false; //nothing to add
+    return false; //no node to add
   }
 
-  //if the key is already in the cache, remove the old one first
-  //so the key does not end up in the cache twice
+  //if key is already in cache, remove old one first
   if (contains(curKey)) {
     remove(curKey);
   }
 
-  //cache is full, so the oldest entry (tail of the list) has to go
+  //cache full, remove tail
   if (getSize() >= maxCacheSize) {
     DllNode* oldest = doublyLinkedList->tail;
     if (oldest != nullptr) {
-      int oldestKey = oldest->key; //save key before the node gets deleted
-      hashTable->remove(oldestKey);        //deletes the HashNode only
-      doublyLinkedList->removeTailNode();  //deletes the DllNode
+      int oldestKey = oldest->key; //save key before deletion
+      hashTable->remove(oldestKey); //deletes HashNode
+      doublyLinkedList->removeTailNode(); //deletes DllNode
     }
   }
 
-  //newest entry goes at the head so the oldest is always at the tail
+  //newest entry in head
   doublyLinkedList->insertAtHead(curKey, myNode);
 
-  //hash node just points to the list node, so no second copy of the data
+  //hash only points to the list node
   HashNode* newHashNode = new HashNode(curKey, myNode);
   newHashNode->hashCode = hashTable->calculateHashCode(curKey);
   return hashTable->add(curKey, newHashNode);
@@ -90,12 +89,12 @@ bool CacheManager::add(int curKey, DllNode* myNode) {
 * @return True if removed, false if the key was not found.
 */
 bool CacheManager::remove(int curKey) {
-  //key not in the cache, nothing to remove (like key 106 in testCase1)
+  //key not in cache
   if (!hashTable->contains(curKey)) {
     return false;
   }
 
-  hashTable->remove(curKey);        //deletes the HashNode
+  hashTable->remove(curKey); //deletes the HashNode
   doublyLinkedList->remove(curKey); //deletes the DllNode
   return true;
 }
@@ -104,7 +103,7 @@ bool CacheManager::remove(int curKey) {
 * @brief Remove all entries from the CacheManager.
 */
 void CacheManager::clear() {
-  hashTable->clear();       //only deletes HashNodes
+  hashTable->clear(); //only deletes HashNodes
   doublyLinkedList->clear(); //deletes the DllNodes
 }
 
@@ -142,9 +141,8 @@ bool CacheManager::contains(int curKey) {
 * @brief Prints the current contents of the cache to console and output file.
 */
 void CacheManager::printCache() {
-  //the \n's are there so the output lines up with the expected output file
   logToFileAndConsole("\n\nPrinting out the cache contents");
-  doublyLinkedList->printList(); //prints the FIFO list
-  hashTable->printTable();       //prints every bucket
+  doublyLinkedList->printList(); //prints FIFO list
+  hashTable->printTable(); //prints every bucket
   logToFileAndConsole("\nEnd of cache contents");
 }
