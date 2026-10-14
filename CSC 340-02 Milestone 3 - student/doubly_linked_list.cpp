@@ -259,7 +259,7 @@ void DoublyLinkedList::clear() {
     delete current;
     current = next; // moves to next node
   }
-}
+
   // empty
   head = nullptr;
   tail = nullptr;
