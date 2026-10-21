@@ -1,0 +1,39 @@
+Starting test for Milestone 4.
+
+
+Processing actions for: testCase1
+Calling isEmpty().
+isEmpty returned: Yes
+Calling add(20).
+Successfully added: 20
+Calling add(30).
+Successfully added: 30
+Calling clear()
+Successfully called cleared.
+Calling isEmpty().
+isEmpty returned: Yes
+Calling add(40).
+Successfully added: 40
+Calling add(50).
+Successfully added: 50
+Calling remove(106)
+Failed to remove key: 106
+Calling isEmpty().
+isEmpty returned: No
+Height of Tree is: 2
+Performing Breadth First traversal
+Node key: 40
+Node key: 50
+Performing Depth First via PreOrder traversal
+Performing Pre-order traversal
+Node key: 40
+Node key: 50
+Performing In-order traversal
+Node key: 40
+Node key: 50
+Performing Post-order traversal
+Node key: 50
+Node key: 40
+Performing Pre-order traversal
+Node key: 40
+Node key: 50
